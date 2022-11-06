@@ -2,7 +2,7 @@ import numpy as np
 import random
 import string
 
-CLASSES = ["set 1", "set 2", "set 3", "set 4", "set 5", "set 6"]
+sets = ["set 1", "set 2", "set 3", "set 4", "set 5", "set 6"]
 
 
 def createDataTable(max):
@@ -10,7 +10,7 @@ def createDataTable(max):
     letters = string.punctuation
     for i in range(0, max):
         row = [i + np.random.normal(0, 0.35), i + 1 + np.random.normal(0, 0.35), i + 2 + np.random.normal(0, 0.35),
-               random.choice(CLASSES), ''.join(random.choice(letters) for i in range(10)), i + 4]
+               random.choice(sets), ''.join(random.choice(letters) for i in range(10)), i + 4]
         data.append(row)
     return data
 
